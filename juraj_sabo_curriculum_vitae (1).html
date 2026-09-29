@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juraj Sabo - Životopis & Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .print-shadow-none { box-shadow: none !important; }
+            .print-border-none { border: none !important; }
+            .page-break-inside-avoid { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans min-h-screen transition-colors duration-200">
+
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 no-print">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <span class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-xl shadow-md">JS</span>
+                    <span class="font-bold text-lg text-slate-900 dark:text-white tracking-wide">Juraj Sabo</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <!-- Dark Mode Toggle -->
+                    <button id="themeToggle" class="p-2.5 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Prepnúť tmavý/svetlý režim">
+                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-lg text-amber-400"></i>
+                    </button>
+                    <!-- Print Button -->
+                    <button onclick="window.print()" class="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-medium rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-print"></i>
+                        <span class="hidden sm:inline">Vytlačiť / PDF</span>
+                    </button>
+                    <!-- Contact Action Button -->
+                    <a href="mailto:sabo.juraj22@gmail.com" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Kontakt</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
+
+        <header class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 lg:gap-8">
+                <!-- Avatar / Photo -->
+                <div class="relative shrink-0">
+                    <img src="https://lh3.googleusercontent.com/d/1XqI2bLd1b7j7A-example-image" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/160x160/16a34a/ffffff?text=JS';" 
+                         alt="Juraj Sabo" 
+                         class="w-36 h-36 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-md">
+                    <span class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-slate-800 rounded-full" title="Dostupný pre prácu"></span>
+                </div>
+
+                <!-- Bio / Info -->
+                <div class="flex-1 text-center md:text-left space-y-4">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">Juraj Sabo</h1>
+                            <span class="px-3 py-1 bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-semibold rounded-full border border-brand-200 dark:border-brand-800">
+                                Junior IT / Technický špecialista
+                            </span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Dátum narodenia: 29. 6. 1994</p>
+                    </div>
+
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+                        "Som technický typ, rýchlo sa učím. Neváhajte ma kontaktovať – pracoval som aj s ľuďmi, vôbec s komunikáciou nemám problém. Na škole som mal aj slaboprúd a pájkovanie DPS."
+                    </p>
+
+                    <!-- Contact Details Badges -->
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2 text-sm text-slate-600 dark:text-slate-300">
+                        <a href="mailto:sabo.juraj22@gmail.com" class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-700/50 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">
+                            <i class="fa-solid fa-envelope text-brand-600 dark:text-brand-400"></i>
+                            <span>sabo.juraj22@gmail.com</span>
+                        </a>
+                        <a href="tel:0903342349" class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-700/50 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">
+                            <i class="fa-solid fa-phone text-brand-600 dark:text-brand-400"></i>
+                            <span>0903 342 349</span>
+                        </a>
+                        <div class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-700/50 rounded-lg">
+                            <i class="fa-solid fa-location-dot text-brand-600 dark:text-brand-400"></i>
+                            <span>Trebišovská, 82102 Bratislava <span class="text-xs text-slate-400">(Trvalý pobyt: Prešov)</span></span>
+                        </div>
+                        <div class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-700/50 rounded-lg">
+                            <i class="fa-solid fa-car text-brand-600 dark:text-brand-400"></i>
+                            <span>Vodičský preukaz: AM, B1, B (&gt;50 000 km)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="grid md:grid-cols-2 gap-6">
+            <!-- Education -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 bg-brand-50 dark:bg-brand-900/30 rounded-xl text-brand-600 dark:text-brand-400">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Vzdelanie</h2>
+                </div>
+                <div class="space-y-3">
+                    <div class="border-l-2 border-brand-500 pl-4 py-1">
+                        <div class="text-sm text-brand-600 dark:text-brand-400 font-semibold">2009 – 2013</div>
+                        <div class="font-bold text-slate-800 dark:text-slate-100">SPŠ Strojnícka v Prešove</div>
+                        <div class="text-sm text-slate-500 dark:text-slate-400">Obor: Technika a prevádzka dopravy</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 bg-brand-50 dark:bg-brand-900/30 rounded-xl text-brand-600 dark:text-brand-400">
+                        <i class="fa-solid fa-certificate text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Kurzy a certifikácie</h2>
+                </div>
+                <div class="space-y-3">
+                    <div class="border-l-2 border-brand-500 pl-4 py-1">
+                        <div class="text-sm text-brand-600 dark:text-brand-400 font-semibold">2025</div>
+                        <div class="font-bold text-slate-800 dark:text-slate-100">Tvorba webových aplikácií v Java</div>
+                        <div class="text-sm text-slate-600 dark:text-slate-300">ITnetwork Academy Slovensko s.r.o.</div>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Osvedčenie o absolvovaní akreditovaného vzdelávacieho programu ďalšieho vzdelávania.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 bg-brand-50 dark:bg-brand-900/30 rounded-xl text-brand-600 dark:text-brand-400">
+                        <i class="fa-solid fa-briefcase text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Pracovné skúsenosti</h2>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-1.5 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl text-xs sm:text-sm font-medium no-print">
+                    <button onclick="filterExperience('all')" class="tab-btn active px-3 py-1.5 rounded-lg transition-colors bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm" data-tab="all">Všetky</button>
+                    <button onclick="filterExperience('it-admin')" class="tab-btn px-3 py-1.5 rounded-lg transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-tab="it-admin">IT & Admin</button>
+                    <button onclick="filterExperience('logistics')" class="tab-btn px-3 py-1.5 rounded-lg transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-tab="logistics">Logistika & Sklad</button>
+                    <button onclick="filterExperience('services')" class="tab-btn px-3 py-1.5 rounded-lg transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-tab="services">Služby & Komunikácia</button>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div id="experienceTimeline" class="space-y-6 relative before:absolute before:inset-0 before:left-3.5 sm:before:left-4 before:w-0.5 before:bg-slate-200 dark:before:bg-slate-700">
+                
+                <!-- Item 1 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="logistics services">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Poštový doručovateľ</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">Slovenská pošta a.s.</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">7/2026 – 9/2026</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Poštový doručovateľ – peší obvod.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="logistics">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Manipulant</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">CEMM THOME SK, spol. s r.o.</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">5/2024 – 8/2024</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Práca s paletovým vozíkom, uskladňovanie tovaru v mini sklade, rozvoz komponentov jednotlivým operátorom výroby podľa potreby.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="logistics services">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Kuriér SZČO</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">Wolt Slovensko s.r.o, Dodo delivery a i.</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">6/2021 – 10/2023</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Kuriérske služby. Rozvoz jedál pre tretie strany. Dopravné prostriedky: bicykel aj automobil.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="it-admin services">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Recepčný</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">SECURITAS SK s.r.o.</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">4/2020 – 6/2020</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Uvítanie návštev, evidencia návštev, frankovanie pošty, obhliadka vyhradeného parkoviska.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="services">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Telefonický operátor</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">Crystall Call a.s.</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">8/2019 – 11/2019</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Aktívne telefonovanie respondentom, anketárstvo a súvisiace činnosti.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="it-admin services">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Informátor</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">PKO Čierny orol</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">8/2018 – 5/2019</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Prijímanie a prepájanie hovorov, navigovanie návštevníkov v budove.</p>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="it-admin">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Všeobecný administratívny pracovník</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">OTTO work</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">12/2017 – 2/2018</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Zahraničná pracovná skúsenosť (Holandsko).</p>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="services">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Reklamné a marketingové služby (Živnosť)</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">Juraj Sabo</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">7/2014 – 10/2017</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Inštalácia a odstraňovanie veľkoplošnej reklamy.</p>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="it-admin">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Pájkovač DPS</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">ELCOM, s.r.o., Prešov</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">8/2013 – 10/2013</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Pájkovanie plošných spojov (DPS), výroba registračných pokladníc ELCOM.</p>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="exp-item relative pl-8 sm:pl-10 page-break-inside-avoid" data-category="services">
+                    <span class="absolute left-1.5 sm:left-2 top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-800"></span>
+                    <div class="bg-slate-50 dark:bg-slate-700/30 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Predavač</h3>
+                                <div class="text-sm font-medium text-brand-600 dark:text-brand-400">SPIRIT s.r.o.</div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-slate-200 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">11/2013 – 1/2014</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Maloobchodný predaj pyrotechniky.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid lg:grid-cols-3 gap-6">
+            
+            <!-- IT & Programming -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 bg-brand-50 dark:bg-brand-900/30 rounded-xl text-brand-600 dark:text-brand-400">
+                        <i class="fa-solid fa-code text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">IT & Vývoj</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">Java</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">MS SQL</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">XML</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">CSS</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">Visual Studio</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">ChatGPT</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">MS Windows</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">UNIX / Linux</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">Administrácia LAN/WAN</span>
+                </div>
+            </div>
+
+            <!-- Software & Office -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 bg-brand-50 dark:bg-brand-900/30 rounded-xl text-brand-600 dark:text-brand-400">
+                        <i class="fa-solid fa-laptop-file text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Kancelária & Softvér</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">MS Word</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">MS Excel</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">MS Outlook</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">MS PowerPoint</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">Google Docs</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">Fakturácia</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">Pokladňa</span>
+                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium rounded-lg">Jednoduché účtovníctvo</span>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 bg-brand-50 dark:bg-brand-900/30 rounded-xl text-brand-600 dark:text-brand-400">
+                        <i class="fa-solid fa-language text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Jazykové znalosti</h3>
+                </div>
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Anglický jazyk</span>
+                            <span class="text-slate-500">Stredne pokročilý</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                            <div class="bg-brand-600 h-2 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Ruský jazyk</span>
+                            <span class="text-slate-500">Základy / Mierne pokročilý</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                            <div class="bg-brand-600 h-2 rounded-full" style="width: 35%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Nemecký jazyk</span>
+                            <span class="text-slate-500">Základy</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                            <div class="bg-brand-600 h-2 rounded-full" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/60 print-shadow-none">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="p-2.5 bg-brand-50 dark:bg-brand-900/30 rounded-xl text-brand-600 dark:text-brand-400">
+                    <i class="fa-solid fa-chart-simple text-xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Výsledky testov na Kariera.sk</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Overené znalostné testy</p>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">Internet a e-mail</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">86%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 86%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">MS Word – Začiatočník</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">87%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 87%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">MS Word – Pokročilý</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">77%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 77%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">Práca s počítačom</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">74%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 74%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">MS Excel – Začiatočník</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">77%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 77%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">Angličtina</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">50%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">MS Word – Expert</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">45%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 45%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">PHP skript – Základy</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">42%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 42%"></div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-sm text-slate-800 dark:text-slate-200">MS Excel – Pokročilý</span>
+                        <span class="text-brand-600 dark:text-brand-400 font-bold text-sm">38%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-brand-600 h-2 rounded-full" style="width: 38%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 mt-12 no-print">
+        <div class="max-w-6xl mx-auto px-4 text-center text-sm text-slate-500 dark:text-slate-400">
+            <p>&copy; <span id="currentYear"></span> Juraj Sabo. Digitálny životopis.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Dark/Light theme toggler
+        const themeToggleBtn = document.getElementById('themeToggle');
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Filter work experience tabs
+        function filterExperience(category) {
+            const items = document.querySelectorAll('.exp-item');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-tab') === category) {
+                    btn.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+                    btn.classList.remove('text-slate-600', 'dark:text-slate-400');
+                } else {
+                    btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+                    btn.classList.add('text-slate-600', 'dark:text-slate-400');
+                }
+            });
+
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category').includes(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
